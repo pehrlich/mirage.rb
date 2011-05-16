@@ -1,0 +1,14 @@
+Uses symoblic linking to allow you to work with a reorganized rails directory structure.  Creates the folder mirage/ in your application root, and populates it as mirage/resource/*
+
+Designed to ease the working process of large apps in which navigating from a resource's controller to its model of view is a total pain.
+
+Currently only runs once to create links and then quits, but if you want to add directory watching for actively mirroring files created /app or moving and relinking files in mirage/, you're totally welcome.  I've already done some preliminaries.
+
+Also has the ability to watch sass files automatically.
+
+
+INSTALLATION
+
+Copy mirage.rb to your applications root folder.  Run with "ruby mirage.rb"
+
+Tested and supports directory structures for rails 2 through 3.1.  May need to be edited to use 'new Proc' rather than 'proc' in older versions of ruby.
